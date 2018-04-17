@@ -14,12 +14,11 @@ class ViewController: UIViewController {
      * This tuple stands for time
      */
     var time: (minutes: UInt8, seconds: UInt8, fraction: UInt8) = (0,0,0)
-    
-    var duringTest = false
-    
-    var count = 0
-    
-    @IBOutlet weak var textView: UITextView!
+
+    /**
+     * This interger identifies the current trial's number
+     */
+    var trialNumber = 0
     
     /**
      * This defines the start time
@@ -31,29 +30,51 @@ class ViewController: UIViewController {
      */
     var timer:Timer = Timer()
     
+    /**
+     * This is a UIImage of the color green
+     */
     let green = #imageLiteral(resourceName: "green.png")
+    
+    /**
+     * This is a UIImage of the color grey
+     */
     let grey = #imageLiteral(resourceName: "grey.png")
     
+    /**
+     * This array of interger is used to store the randomly generated times for the color to change
+     */
     var lotsOfRandomTimes:[Int] = []
+    
+    /**
+     * This array of double is used to store the result times of each trial
+     */
     var results:[Double] = []
     
-    var commonError = 0.0
+    /**
+     * This textview shows is used as an reflection of console output in the UI
+     */
+    @IBOutlet weak var textView: UITextView!
     
-    
+    /**
+     * This is the button at the back
+     */
     @IBOutlet weak var bigColorButton: UIButton!
     
+    /**
+     * This function handles the response when the bigColorButton is pressed
+     *
+     * @param sender UIButton the bigColorButton
+     */
     @IBAction func bigColorButtonIsPressed(_ sender: UIButton) {
-        print("pressed")
         
-        if duringTest {
-            duringTest = false
-           
-            results.append(NSDate.timeIntervalSinceReferenceDate-startTime-Double(lotsOfRandomTimes[count-1]))
-            textView.text.append("\nTrial \(count): \(results.last!)")
-            print("Trial \(count): \(results.last!)")
+        // check if the button is currently flipped
+        if sender.backgroundImage(for: UIControlState.normal)==grey {
+            sender.setBackgroundImage(green, for: UIControlState.normal)
+            results.append(NSDate.timeIntervalSinceReferenceDate-startTime-Double(lotsOfRandomTimes[trialNumber-1]))
+            textView.text.append("\nTrial \(trialNumber): \(results.last!)")
+            print("Trial \(trialNumber): \(results.last!)")
             
-            
-            if count == 5 {
+            if trialNumber == 5 {
                 timer.invalidate()
                 var average = 0.0
                 for result in results {
@@ -62,20 +83,17 @@ class ViewController: UIViewController {
                 average /= 5
                 textView.text.append("\nAverage Time: \(average)sec")
             }
-            bigColorButton.setBackgroundImage(green, for: UIControlState.normal)
-
-            
         }
         
         
-        if (!timer.isValid && count == 0){
+        if (!timer.isValid && trialNumber == 0){
             
-            //run update Time repeativelly
+            // run update Time repeativelly
             let aSelector : Selector = #selector(ViewController.updateTime)
             timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             
-            //run Time Alert check repeativelly
-            let bSelector: Selector = #selector(ViewController.timeAlert)
+            // check if the color will be flipped
+            let bSelector: Selector = #selector(ViewController.flipColor)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: bSelector, userInfo: nil, repeats: true)
             
             // define start time
@@ -101,31 +119,33 @@ class ViewController: UIViewController {
         }
     }
     
-    @objc func timeAlert() {
-        guard count<5 else {
+    /**
+     * This function flips the color of the button at the randomly generated time
+     */
+    @objc func flipColor() {
+        guard trialNumber<5 else {
             timer.invalidate()
             return
         }
-        if time.seconds == lotsOfRandomTimes[count] {
-            duringTest = true
+        if time.seconds == lotsOfRandomTimes[trialNumber] {
             bigColorButton.setBackgroundImage(grey, for: UIControlState.normal)
             print("Trigger")
-            count += 1
-            //print("\(count):\(lotsOfRandomTimes[count])")
-            //print("\(NSDate.timeIntervalSinceReferenceDate-startTime)")
+            trialNumber += 1
         }
     }
     
+    /**
+     * This function overrided the viewDidLoad function
+     *
+     * This function generates 5 pairs of randomly generated times each 5~7 seconds away
+     */
     override func viewDidLoad() {
-        let currentTime = NSDate.timeIntervalSinceReferenceDate
-        commonError = currentTime - startTime
-        print(commonError)
         super.viewDidLoad()
         lotsOfRandomTimes.append(Int(arc4random() % 2) + 5)
         for i in 0..<4 {
             lotsOfRandomTimes.append(Int(arc4random() % 2) + 5 + lotsOfRandomTimes[i])
         }
-        print(lotsOfRandomTimes)
+
     }
 
 

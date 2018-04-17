@@ -26,7 +26,7 @@
                                     <action selector="bigColorButtonIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BvT-aU-D6b"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Press Anywhere to Start" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="teM-SM-WkZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Press Anywhere Else to Start" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="teM-SM-WkZ">
                                 <rect key="frame" x="52" y="266" width="271" height="134"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
