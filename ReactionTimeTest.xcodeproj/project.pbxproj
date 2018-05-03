@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB20C235209ACA4600F7CF42 /* startGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = CB20C22F209ACA4600F7CF42 /* startGreen.png */; };
+		CB20C236209ACA4600F7CF42 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB20C230209ACA4600F7CF42 /* yellow.png */; };
+		CB20C237209ACA4600F7CF42 /* greenHue.png in Resources */ = {isa = PBXBuildFile; fileRef = CB20C231209ACA4600F7CF42 /* greenHue.png */; };
+		CB20C238209ACA4600F7CF42 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = CB20C232209ACA4600F7CF42 /* orange.png */; };
+		CB20C239209ACA4600F7CF42 /* yelloishGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = CB20C233209ACA4600F7CF42 /* yelloishGreen.png */; };
+		CB20C23A209ACA4600F7CF42 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = CB20C234209ACA4600F7CF42 /* red.png */; };
 		CB2DFB5B20843883006B6265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DFB5A20843883006B6265 /* AppDelegate.swift */; };
 		CB2DFB5D20843883006B6265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DFB5C20843883006B6265 /* ViewController.swift */; };
 		CB2DFB6020843883006B6265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2DFB5E20843883006B6265 /* Main.storyboard */; };
@@ -15,9 +21,6 @@
 		CB2DFB6820843885006B6265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2DFB6620843885006B6265 /* LaunchScreen.storyboard */; };
 		CB2DFB7320843885006B6265 /* ReactionTimeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DFB7220843885006B6265 /* ReactionTimeTestTests.swift */; };
 		CB2DFB7E20843885006B6265 /* ReactionTimeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DFB7D20843885006B6265 /* ReactionTimeTestUITests.swift */; };
-		CB2DFB912084394A006B6265 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2DFB8F2084394A006B6265 /* red.png */; };
-		CB2DFB922084394A006B6265 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2DFB902084394A006B6265 /* green.png */; };
-		CB2DFB942084603B006B6265 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2DFB932084603B006B6265 /* grey.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB20C22F209ACA4600F7CF42 /* startGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startGreen.png; sourceTree = "<group>"; };
+		CB20C230209ACA4600F7CF42 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		CB20C231209ACA4600F7CF42 /* greenHue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenHue.png; sourceTree = "<group>"; };
+		CB20C232209ACA4600F7CF42 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		CB20C233209ACA4600F7CF42 /* yelloishGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yelloishGreen.png; sourceTree = "<group>"; };
+		CB20C234209ACA4600F7CF42 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		CB2DFB5720843883006B6265 /* ReactionTimeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactionTimeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2DFB5A20843883006B6265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB2DFB5C20843883006B6265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -52,9 +61,6 @@
 		CB2DFB7920843885006B6265 /* ReactionTimeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactionTimeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2DFB7D20843885006B6265 /* ReactionTimeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTimeTestUITests.swift; sourceTree = "<group>"; };
 		CB2DFB7F20843885006B6265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB2DFB8F2084394A006B6265 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
-		CB2DFB902084394A006B6265 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
-		CB2DFB932084603B006B6265 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB20C22E209ACA4600F7CF42 /* colors */ = {
+			isa = PBXGroup;
+			children = (
+				CB20C22F209ACA4600F7CF42 /* startGreen.png */,
+				CB20C230209ACA4600F7CF42 /* yellow.png */,
+				CB20C231209ACA4600F7CF42 /* greenHue.png */,
+				CB20C232209ACA4600F7CF42 /* orange.png */,
+				CB20C233209ACA4600F7CF42 /* yelloishGreen.png */,
+				CB20C234209ACA4600F7CF42 /* red.png */,
+			);
+			path = colors;
+			sourceTree = "<group>";
+		};
 		CB2DFB4E20843883006B6265 = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +131,7 @@
 				CB2DFB6620843885006B6265 /* LaunchScreen.storyboard */,
 				CB2DFB6920843885006B6265 /* Info.plist */,
 				CB2DFB6120843883006B6265 /* ReactionTimeTest.xcdatamodeld */,
-				CB2DFB902084394A006B6265 /* green.png */,
-				CB2DFB8F2084394A006B6265 /* red.png */,
-				CB2DFB932084603B006B6265 /* grey.png */,
+				CB20C22E209ACA4600F7CF42 /* colors */,
 			);
 			path = ReactionTimeTest;
 			sourceTree = "<group>";
@@ -241,12 +258,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB20C237209ACA4600F7CF42 /* greenHue.png in Resources */,
+				CB20C235209ACA4600F7CF42 /* startGreen.png in Resources */,
 				CB2DFB6820843885006B6265 /* LaunchScreen.storyboard in Resources */,
-				CB2DFB912084394A006B6265 /* red.png in Resources */,
-				CB2DFB942084603B006B6265 /* grey.png in Resources */,
-				CB2DFB922084394A006B6265 /* green.png in Resources */,
+				CB20C23A209ACA4600F7CF42 /* red.png in Resources */,
+				CB20C236209ACA4600F7CF42 /* yellow.png in Resources */,
 				CB2DFB6520843885006B6265 /* Assets.xcassets in Resources */,
 				CB2DFB6020843883006B6265 /* Main.storyboard in Resources */,
+				CB20C239209ACA4600F7CF42 /* yelloishGreen.png in Resources */,
+				CB20C238209ACA4600F7CF42 /* orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
